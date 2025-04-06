@@ -14,4 +14,7 @@ use App\Http\Controllers\CategortyController;
 |
 */
 
-Route::get('/', [CategortyController::class ,'index'])->name('index');
+Route::get('category', [CategortyController::class, 'index'])->name('category.index');
+Route::get('category/create', [CategortyController::class, 'create'])->name('category.create');
+Route::post('category', [CategortyController::class, 'store'])->name('category.store');
+Route::get('category/{id}/edit', [CategortyController::class, 'edit'])->name('category.edit');
